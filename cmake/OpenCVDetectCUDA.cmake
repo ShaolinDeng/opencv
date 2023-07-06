@@ -58,7 +58,7 @@ if(CUDA_FOUND)
       # place header file under CUDA_TOOLKIT_TARGET_DIR or CUDA_TOOLKIT_ROOT_DIR
       find_path(_header_result
         ${_filename}
-        PATHS "${CUDA_TOOLKIT_TARGET_DIR}" "${CUDA_TOOLKIT_ROOT_DIR}"
+        PATHS "${CUDA_TOOLKIT_TARGET_DIR}" "${CUDA_TOOLKIT_ROOT_DIR}" "/usr/local/cuda/include"
         ENV CUDA_PATH
         ENV CUDA_INC_PATH
         PATH_SUFFIXES include
